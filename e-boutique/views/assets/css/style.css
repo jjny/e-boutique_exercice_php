@@ -1,0 +1,647 @@
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,400italic,700italic,900,700,900italic);
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700,600,500,300);
+/* * Sunday - Onepage Personal/Portfolio
+ * © scrils
+*/
+/* ========TABLE OF CONTENTS==========
+00. Body, links, hgroup, paragraphs, general styles
+01. Fixed header & Navigation
+02. Section Intro (Home)
+03. Section About
+04. Section Resume
+05. Section Portfolio
+06. Section Blog
+07. Section Contact
+08. Footer
+09. Loader
+10. Responsive design
+
+/*--------------------------------------------------
+	00. Body, links, hgroup, paragraphs, general styles
+---------------------------------------------------*/
+
+
+body {
+	background:rgba(0,0,0,1);
+	font-family: 'Abel', sans-serif;
+    color:black;
+	margin: 0;
+	padding: 0;
+    background-image:url('../../sky.jpg');
+    background-size: cover;
+}
+
+.mobi, .jouet{
+	margin-bottom:150px;
+}
+
+
+.ajout a:visited  ,a{
+	color:red;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.ajout a{
+	color:red;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+}
+
+.categorie{
+	margin-bottom:50px;
+}
+
+.categorie tr{
+	background-color:rgba(255, 255, 255,0.4);
+	
+
+}
+
+.categorie td{
+	border: 1px solid black;
+	padding:10px;
+
+}
+
+* {
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+
+  	-webkit-transition: all .25s ease-in-out;
+  	transition: all .25s ease-in-out;
+  	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+	color: darkgreen;
+}
+a:focus {
+	color: green;
+	outline: 0;
+	text-decoration: none;
+}
+
+h1 {
+	    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    line-height: 113px;
+    font-size: 120px;
+    margin-top: 20px;
+
+}
+
+h3 {
+	    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 0px;
+    line-height: 33px;
+    font-size: 30px;
+    margin-top: 0px;
+
+	margin-bottom:10px;
+	text-align:center;
+}
+
+.genre, .back {
+font-weight: bold;
+color:white;
+border: 2px solid white;
+padding:20px;
+background: rgba(0, 255, 5,0.4);
+  /*  background-image:url('../../sky.jpg');
+    background-size: cover;*/
+
+}
+
+.background-video{
+display: block;
+position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 1920px;
+    height: 1080px;
+
+    background-size: cover; 
+}
+
+
+
+
+
+/*--------------------------------------------------
+	01. Fixed header & Navigation
+---------------------------------------------------*/
+.header-fixed {
+	position: fixed;
+	z-index: 1000;
+	top: 50px;
+	left: 50px;
+	background: rgba(0, 255, 5,0.4);
+	padding: 20px 25px;
+	max-width: 250px;
+	 border-radius: 10px;
+	
+}
+.menu-icon {
+	width: 25px;
+    height: 25px;
+    cursor: pointer;
+    position: relative;
+	left:22px;
+    padding-left: 1px;
+    padding-top: 1px;
+  	-webkit-transition: all .25s ease-in-out;
+  	transition: all .25s ease-in-out;
+	}
+
+.menu-icon:hover .top {
+  -webkit-transform: rotateZ(0deg) translateX(0px) translateY(-3px);
+  -moz-transform: rotateZ(0deg) translateX(0px) translateY(-3px);
+  -ms-transform: rotateZ(0deg) translateX(0px) translateY(-3px);
+  -o-transform: rotateZ(0deg) translateX(0px) translateY(-3px);
+  transform: rotateZ(0deg) translateX(0px) translateY(-3px);
+}
+/* line 348, ../sass/header.scss */
+.menu-icon:hover .bottom {
+  -webkit-transform: rotateZ(0deg) translateX(0px) translateY(3px);
+  -moz-transform: rotateZ(0deg) translateX(0px) translateY(3px);
+  -ms-transform: rotateZ(0deg) translateX(0px) translateY(3px);
+  -o-transform: rotateZ(0deg) translateX(0px) translateY(3px);
+  transform: rotateZ(0deg) translateX(0px) translateY(3px);
+}
+
+.menu-bar {
+    width: 25px;
+    height: 2px;
+    background: #ddd;
+    margin-bottom: 7px;
+    position: relative;
+    right: 0;
+}
+
+
+.menu-nav {
+	
+	position: relative;
+	top: 20px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+  	-webkit-transition: all .25s ease-in-out;
+  	transition: all .25s ease-in-out;
+}
+
+.menu-nav ul{
+margin:0px;
+padding-left:0px;
+
+}
+
+.menu-nav-open {
+	max-height: 300px;
+}
+
+.connect{
+	position: fixed;
+	z-index: 1000;
+	background: rgba(0, 255, 5,0.4);
+	padding: 20px;
+	max-width: 250px;
+	 border-radius: 10px;
+	top: 50px;
+	right:70px;
+	width: 100%;
+	max-height: 0;
+	overflow: hidden;
+  	font-weight: bold;
+	color:white;
+	border: 2px solid white;
+	text-align:center;
+
+
+}
+.top-menu li {
+	display: block;
+	margin: 15px 0;
+	text-align:center;
+    color:black;
+}
+.top-menu li a {
+	font-weight: 600;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+.active a{
+	color: #fff!important;
+	text-decoration: line-through;
+}
+
+
+/*------------------------------------------------
+	02. Section Intro (Home)
+---------------------------------------------------*/
+
+.main-intro {
+	text-align: center;
+	/*background: #fff url(../images/bg.jpg);*/
+	background-position: 90% 90%;
+    background-size: cover;
+    height: 100vh;
+	
+	
+}
+
+.intro{
+background-size: cover;
+position: relative;
+overflow: hidden;
+width: 100%;
+
+}
+
+
+.main-content {
+	padding-top: 0%;
+	text-align: center;
+}
+
+
+ p{
+
+    line-height: 27px;
+    max-width: 655px;
+    font-size: 20px;
+
+    margin: auto;
+    z-index: 100;
+    margin-bottom: 35px;
+    font-weight: 300;
+	position:relative;
+	left:10px;
+
+}
+
+
+/* Parcours*/
+
+#accueil{
+	padding: 100px 0;
+}
+
+.block-parcours{
+	padding-top:60px;
+	padding-left:40px;
+	top:20px;
+}
+
+#parcours p{
+	text-align : center;
+}
+
+#parcours b {
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+#parcours i {
+	font-size: 11px;
+}
+
+
+/*------------------------------------------------
+	05. Section works
+---------------------------------------------------*/
+
+
+#works{
+	padding: 100px 0;
+	height: 100vh;
+}
+
+#works p{
+	text-align : center;
+}
+
+#works b{
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+#works i{
+	font-size: 11px;
+}
+
+.block-connexion{
+padding-top:150px;
+	padding-left:40px;
+	top:30px;
+	
+}
+
+
+/*Carousel */
+
+#myCarousel{
+ 
+ width:900px;
+ height:350px;
+ position:relative;
+    top:50px;
+ bottom:15px;
+
+
+}
+
+#myCarousel video{
+	position:relative;
+	right:30px;
+	width: 500px; 
+	height: 250px;  
+	display: block;
+	z-index:1;
+	top:40px;
+	
+
+}
+
+#myCarousel .left p, #myCarousel .right p{
+	width:35px;
+	left:35px;
+	position:relative;
+	top:130px;
+	
+
+}
+
+#myCarousel .right p{
+left:-50px;
+}
+
+
+#myCarousel .left img{
+	ms-transform: rotate(180deg); /* IE 9 */
+    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+    transform: rotate(180deg);
+	left:50px;
+	
+}
+
+.carousel-inner{
+	position:relative;
+	left:30px;
+	
+	
+}
+
+.carousel-caption{
+	position:relative;
+	top:-30px;
+	right:20px;
+	width: 350px;
+	bottom:0px;
+	padding:0px;
+
+
+}
+
+.carousel-caption h3{
+	position: relative;
+	top:-220px;
+	left:45px;
+}
+
+.carousel-indicators{
+	margin-top:10px;
+	
+}
+
+.carousel-control.right{
+	right:65px;
+}
+
+.carousel-control.left{
+	right:-50px;
+}
+
+
+/* nouveautés*/
+
+#nouveaux{
+
+    padding-bottom: 400px;
+}
+
+
+/*compte*/
+
+#compte{
+    padding: 100px 0;
+}
+
+/*------------------------------------------------
+	07. Section Contact
+---------------------------------------------------*/
+
+#contact {
+	padding: 100px 0;
+
+}
+.contact-left {
+	text-align: right;
+}
+
+.contact-info {
+	padding-top: 5px;
+}
+.contact-info p {
+	padding-top: 5px;
+	line-height: 25px;
+	color: #eee;
+}
+.contact-right {
+	padding-top: 10px;
+	padding-left: 45px;
+}
+
+/*Contact form*/
+
+input, textarea, select {
+	position: relative;
+    color: black;
+	vertical-align: top;
+	margin: 0;
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	background: white;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+     -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;  
+}
+input:focus,input:hover,textarea:hover,select:hover , textarea:focus, select:focus {
+	outline: none;
+	z-index: 5;
+	background: rgba(153, 0, 51,0.6);
+}
+
+
+input.submit {
+	width: auto;
+	cursor: pointer;
+	position: relative;
+    color: black;
+    padding: 12px 20px;
+    background: white;
+    margin: 10px 0;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 13px;
+  	font-weight: 600;
+  	letter-spacing: 3px;
+  	
+}
+input.submit:hover {
+	background: rgba(153, 0, 51,0.6);;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: black;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: black;
+}
+input[type="submit"][disabled] { background:#000; cursor: default; }
+fieldset { padding:0;border:0; }
+
+.contact-field {
+	padding-bottom: 20px;
+	padding-right: 15px;
+	padding-top: 15px;
+}
+
+/*---Message sent successfull---*/
+
+#message {
+	margin: 1em 0;
+	padding: 0;
+	display: block;
+	background: none;
+}
+#message h2 {
+	font-size: 17px;
+	color: #eee;
+	letter-spacing: 2px;
+	font-weight: 800;
+	text-transform: uppercase;
+	line-height: 22px;
+}
+#message p {
+	color: #888;
+}
+
+/*---Message not sent / ERROR ---*/
+
+.error-message {
+	color: #eee;
+}
+ul.error-messages li {
+  	font-size: 14px;
+  	text-align: left;
+  	color: #888;
+  	list-style: none;
+  	line-height: 30px;
+}
+
+/*--------------------------------------------------
+	08. Footer
+---------------------------------------------------*/
+
+
+.footer {
+	color: white;
+	padding: 70px 0 20px 0;
+	text-align: right;
+}
+
+.footer  .container{	
+	background: dodgerblue;
+}
+.footer-social li {
+	display: inline-block;
+	margin-left: 30px;
+	font-size: 19px;
+	color: black;
+}
+
+.footer-copyright p {
+	font-size: 13px;
+	letter-spacing: 1px;
+	
+	text-align: left;
+}
+
+
+
+/*--------------------------------------------------
+	10. Responsive design
+---------------------------------------------------*/
+
+@media screen and (max-width: 787px) {
+
+.item33 {
+	width: 50%;
+}
+h3.big-title {
+	text-align: left;
+	padding-left: 30px;
+}
+.filters li {
+	display: block;
+	margin: 15px 0;
+}
+.col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8 {
+	margin: 20px 0;
+}
+.contact-left {
+	text-align: left;
+}
+.contact-info {
+	padding-left: 30px;
+}
+.contact-right {
+	padding: 0 45px;
+}
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+.item33 {
+	width: 100%;
+}
+.main-content {
+	padding-top: 25%;
+}
+.main-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+}
+}
